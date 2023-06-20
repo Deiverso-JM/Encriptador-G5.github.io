@@ -173,6 +173,11 @@ h1,h2,h3,h4,p{
     background-color: var(--baby-powder);
 }
 
+.btn_buttons_copiar{
+    columns: var(--baby-powder);
+    background-color: var(--rich-black);
+    border: 2px solid var(--baby-powder);
+}
 
 /* Footer */
 

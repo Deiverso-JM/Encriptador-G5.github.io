@@ -8,8 +8,10 @@ const mensajeTransformado = document.querySelector("#Desencriptar");
 const bottonEncriptar = document.querySelector(".btn_buttons_en");
 const bottonDesencriptar = document.querySelector(".btn_buttons_des");
 const bottonBorrar = document.querySelector(".btn_buttons_borrar");
+const bottonCopiar = document.querySelector(".btn_buttons_copiar");
 
-console.log(bottonBorrar);
+
+
 
 //Condiciones
 const caracteresEncriptados = ["e", "i", "a", "o", "u"];
@@ -33,6 +35,9 @@ function escuchadorEventos() {
         textoRecibido.value = "";
         mensajeTransformado.textContent = "";
     });
+
+    
+    bottonCopiar.addEventListener("click", copy);
 }
 
 //Funciones
@@ -64,3 +69,12 @@ function Agregar(textoListo) {
     mensajeTransformado.textContent = "";
     mensajeTransformado.textContent = textoListo;
 }
+
+function copy(){
+
+    let copyText = document.getElementById("Desencriptar");
+    copyText.select();
+    copyText.setSelectionRange(0,999);
+    document.execCommand("copy");
+
+};
